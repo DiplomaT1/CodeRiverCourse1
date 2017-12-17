@@ -1,0 +1,41 @@
+<div class="hero">
+	<div class="container">
+		<div class="top_header">
+			<div class="logo"><a href="#" title=""><img src="img/logo.png" alt=""></a></div>
+			<nav class="top_menu" role="navigation" id="menuToggle">
+				<input type="checkbox"/>
+				<span></span>
+				<span></span>
+				<span></span>
+				<ul id="menu">
+					{% import "data/data.html" as menu %}
+		
+					{% for menu in menu.list %}
+						<li><a href="" title="">{{menu.title}}</a></li>
+					{% endfor %}
+				</ul>
+			</nav>
+			<div class="user_interface">
+				<div class="user_interface__cart">
+					<div class="cart">
+						<div class="cart__bag">
+							<a href="#" title="">Bag</a>
+						</div>
+						<div class="cart__number">
+							<a href="#" title="">3</a>
+						</div>
+					</div>
+					<div class="sign_in">
+						<div class="sign_in__login">
+							<a href="#" title="Login">Login</a>
+						</div>
+						<span>|</span>
+						<div class="sign_in__sign_up">
+							<a href="#" title="Sign up">Sign up</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,46 @@
+<div class="container">
+	<div class="item_container">
+		<div class="item_slider img-container">
+			
+			{% import "data/data.html" as slides %}
+
+			{% for slide in slides.this_item_slider %}
+			<img src="{{slide.src}}" alt="{{slide.alt}}">
+			{% endfor %}
+
+		</div>
+		<div class="item_image img-container">
+			<img src="img/item_bag_big_1.jpg" alt="">
+		</div>
+		<div class="item_info">
+			<div class="item__category">
+				<img src="img/man-icon.png" alt="">
+				<a href="#" title="">Men Clothes</a><span> > </span><a href="#" title="">Coat&Jacket</a>
+			</div>
+			<h3>Lightweight nylon knitweat <br> in black</h3>
+			<div class="item__price">$48.00</div>
+			<div class="item__description">
+				<h4>Description</h4>
+				<p>Cras efficitur iaculis sapien, vel tincidunt magna egestas at. Nunc finibus, metus id fermentum. Cras efficitur iaculis sapien, vel tincidunt magna egestas at, vel tincidunt magna egestas at cras effcitur. Cras efficitur iaculis sapien, vel tincidunt magna egestas at. Nunc finibus, metus id fermentum. </p>
+			</div>
+			<div class="colors">
+				<p>Colors</p>
+				<hr>
+				<div class="color_line">
+					{% import "data/data.html" as labels %}
+
+					{% for label in labels.color_input %}
+					<div class="color__each">
+						<label for="{{label.forColor}}">
+							<input type="radio" id="{{label.forColor}}" name="contact" value="{{label.name}}">
+							<span></span>
+						</label>
+						<div class="this_color" style="{{label.color}}"></div><p>{{label.name}}</p>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+			<button type="submit" class="btn_buy">Buy now - $78</button>
+		</div>
+	</div>
+</div>

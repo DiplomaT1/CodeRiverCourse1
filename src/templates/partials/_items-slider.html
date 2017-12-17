@@ -1,0 +1,20 @@
+<div class="container">
+	<div class="offer_header">
+		<h6>We thought</h6>
+		<h5>you must like these too...</h5>
+	</div>
+	<div class="offer_slider">
+		{% import "data/data.html" as offers %}
+
+		{% for offer in offers.item_offers %}
+		<div class="offer-slider__item">
+			<div class="offer-slider__image"><img src="{{offer.src}}" alt="{{offer.alt}}"></div>
+			<div class="item__information">
+				<div class="item__information--name">{{offer.name}}</div>
+				<div class="item__information--category">{{offer.category}}</div>
+				<div class="item__information--price">{{offer.price}}</div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+</div>
